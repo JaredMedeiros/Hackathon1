@@ -1,0 +1,83 @@
+@import '../styles/partials/_fonts'; as *
+
+html,
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.title {
+    margin-top:5rem;
+    font-family: 'Source Code Pro';
+    font-weight:400;
+    color: white;
+}
+
+.subtitle {
+    font-family: 'Source Code Pro';
+    font-weight: 300;
+    color:white;
+    margin-bottom: 0;
+}
+
+.wrapper{
+	overflow: hidden;
+	height: 40vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.loading::before{
+	width: 100%;
+	height: 100%;
+	content: " ";
+	border-radius: 50%;
+	box-shadow: 0 0 20px 12px rgba(185, 185, 185, 0.35);
+	position: absolute;
+}
+.loading{
+	color: #000;
+	background: linear-gradient(0deg, #b1b1b1, white, #b8b8b8);
+	width: 20vh;
+	height: 20vh;
+	border-radius: 50%;
+	position: relative;
+	animation: rotate_animation 4s ease-in-out infinite alternate, pulse_animation 3s ease-out infinite;
+}
+.loading::after{
+	width: calc(20vh - 6px);
+	height: calc(20vh - 6px);
+	background-color: currentColor;
+	content: " ";
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	border-radius: 50%;
+	animation: pulse_animation 3s ease-out infinite;
+	animation-delay: .2s;
+}
+
+@keyframes rotate_animation {
+	0%   { transform: rotate(0deg); }
+	100% { transform: rotate(600deg); }
+}
+
+@keyframes pulse_animation {
+	0%, 40% { box-shadow: 0 0 5px 0px rgba(189, 189, 189, 0.2); }
+	100% { box-shadow: 0 0 5px 80px rgba(0, 0, 0, 0); }
+}
+
+.Enter {
+    font-family: 'Source Code Pro';
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+

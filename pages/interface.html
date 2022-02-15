@@ -21,9 +21,142 @@
             <p><button type="button" onclick="runSpeechRecognition()">Speak</button> &nbsp; <span id="action"></span></p>
         </div>
         <div id="output" class="hide"></div>
+        <div class="translation">
+        </div>
         <div class="translation"></div>
+        <div class="result-box">
+        </div>
+        <div id="languages-container" class="hide">
+            <p class="languages-prompt">Choose language to translate to:</p>
+                <ul class="language-list">
+                    
+                        <li class="language-item">English : en</li>
+                        <li class="language-item">Afrikaans : af</li>
+                        <li class="language-item">Albanian : sq</li>
+                        <li class="language-item">Amharic : am</li>
+                        <li class="language-item">Arabic : ar</li>
+                        <li class="language-item">Armenian : hy</li>
+                        <li class="language-item">Assamese : as</li>
+                        <li class="language-item">Azerbaijani : az</li>
+                        <li class="language-item">Basque : eu</li>
+                        <li class="language-item">Belarusian : be</li>
+                        <li class="language-item">Bengali : bn</li>
+                        <li class="language-item">Bosnian : bs</li>
+                        <li class="language-item">Bulgarian : bg</li>
+                        <li class="language-item">Cantonese : yue</li>
+                        <li class="language-item">Catalan : ca</li>
+                        <li class="language-item">Cebuano : ceb</li>
+                        <li class="language-item">Cherokee : chr</li>
+                        <li class="language-item">Chichewa : ny</li>
+                        <li class="language-item">Chinese (Simplified) : zh-CN</li>
+                        <li class="language-item">Chinese (Traditional) : zh-TW</li>
+                        <li class="language-item">Corsican : co</li>
+                        <li class="language-item">Croatian : hr</li>
+                        <li class="language-item">Czech : cs</li>
+                        <li class="language-item">Danish : da</li>
+                        <li class="language-item">Dutch : nl</li>
+                        <li class="language-item">Dzongkha : dz</li>
+                        <li class="language-item">Esperanto : eo</li>
+                        <li class="language-item">Estonian : et</li>
+                        <li class="language-item">Filipino : fil</li>
+                        <li class="language-item">Finnish : fi</li>
+                        <li class="language-item">French : fr</li>
+                        <li class="language-item">Frisian : fy</li>
+                        <li class="language-item">Galician : gl</li>
+                        <li class="language-item">Georgian : ka</li>
+                        <li class="language-item">German : de</li>
+                        <li class="language-item">Greek : el</li>
+                        <li class="language-item">Guarani : gn</li>
+                        <li class="language-item">Gujarati : gu</li>
+                        <li class="language-item">Haitian Creole : ht</li>
+                        <li class="language-item">Hausa : ha</li>
+                        <li class="language-item">Hawaiian : haw</li>
+                        <li class="language-item">Hebrew : iw</li>
+                        <li class="language-item">Hindi : hi</li>
+                        <li class="language-item">Hmong : hmn</li>
+                        <li class="language-item">Hungarian : hu</li>
+                        <li class="language-item">Icelandic : is</li>
+                        <li class="language-item">Igbo : ig</li>
+                        <li class="language-item">Indonesian : id</li>
+                        <li class="language-item">Irish : ga</li>
+                        <li class="language-item">Italian : it</li>
+                        <li class="language-item">Japanese : ja</li>
+                        <li class="language-item">Javanese : jv</li>
+                        <li class="language-item">Kannada : kn</li>
+                        <li class="language-item">Kazakh : kk</li>
+                        <li class="language-item">Khmer : km</li>
+                        <li class="language-item">Kinyarwanda : rw</li>
+                        <li class="language-item">Korean : ko</li>
+                        <li class="language-item">Kurdish (Kurmanji) : ku</li>
+                        <li class="language-item">Kurdish (Sorani) : ckb</li>
+                        <li class="language-item">Kyrgyz : ky</li>
+                        <li class="language-item">Lao : lo</li>
+                        <li class="language-item">Latin : la</li>
+                        <li class="language-item">Latvian : lv</li>
+                        <li class="language-item">Lithuanian : lt</li>
+                        <li class="language-item">Luxembourgish : lb</li>
+                        <li class="language-item">Macedonian : mk</li>
+                        <li class="language-item">Malagasy : mg</li>
+                        <li class="language-item">Malay : ms</li>
+                        <li class="language-item">Malayalam : ml</li>
+                        <li class="language-item">Maltese : mt</li>
+                        <li class="language-item">Maori : mi</li>
+                        <li class="language-item">Marathi : mr</li>
+                        <li class="language-item">Mongolian : mn</li>
+                        <li class="language-item">Myanmar (Burmese) : my</li>
+                        <li class="language-item">Nepali : ne</li>
+                        <li class="language-item">Norwegian : no</li>
+                        <li class="language-item">Odia (Oriya) : or</li>
+                        <li class="language-item">Pashto : ps</li>
+                        <li class="language-item">Persian : fa</li>
+                        <li class="language-item">Polish : pl</li>
+                        <li class="language-item">Portuguese : pt</li>
+                        <li class="language-item">Punjabi : pa</li>
+                        <li class="language-item">Romanian : ro</li>
+                        <li class="language-item">Romansh : rm</li>
+                        <li class="language-item">Russian : ru</li>
+                        <li class="language-item">Samoan : sm</li>
+                        <li class="language-item">Scots Gaelic : gd</li>
+                        <li class="language-item">Serbian : sr</li>
+                        <li class="language-item">Serrano : ser</li>
+                        <li class="language-item">Sesotho : st</li>
+                        <li class="language-item">Shona : sn</li>
+                        <li class="language-item">Sicilian : scn</li>
+                        <li class="language-item">Sindhi : sd</li>
+                        <li class="language-item">Sinhala : si</li>
+                        <li class="language-item">Slovak : sk</li>
+                        <li class="language-item">Slovenian : sl</li>
+                        <li class="language-item">Somali : so</li>
+                        <li class="language-item">Spanish : es</li>
+                        <li class="language-item">Sundanese : su</li>
+                        <li class="language-item">Swahili : sw</li>
+                        <li class="language-item">Swedish : sv</li>
+                        <li class="language-item">Tajik : tg</li>
+                        <li class="language-item">Tamazight : ber</li>
+                        <li class="language-item">Tamil : ta</li>
+                        <li class="language-item">Tatar : tt</li>
+                        <li class="language-item">Telugu : te</li>
+                        <li class="language-item">Thai : th</li>
+                        <li class="language-item">Tibetan : bo</li>
+                        <li class="language-item">Turkish : tr</li>
+                        <li class="language-item">Turkmen : tk</li>
+                        <li class="language-item">Ukrainian : uk</li>
+                        <li class="language-item">Urdu : ur</li>
+                        <li class="language-item">Uyghur : ug</li>
+                        <li class="language-item">Uzbek : uz</li>
+                        <li class="language-item">Vietnamese : vi</li>
+                        <li class="language-item">Welsh : cy</li>
+                        <li class="language-item">Wolof : wo</li>
+                        <li class="language-item">Xhosa : xh</li>
+                        <li class="language-item">Yiddish : yi</li>
+                        <li class="language-item">Yoruba : yo</li>
+                        <li class="language-item">Zulu : zu</li>
+                   
+                </ul>
+        </div>
+        </div>
     </main>    
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
 <script src="../scripts/interface.js"></script>
 </body>
 </html>

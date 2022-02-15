@@ -75,8 +75,64 @@ button {
 
 }
 .hide {
-    display:none;
+    display:none !important;
 }
 .show {
     display:block;
+}
+
+#languages-container {
+    // margin-top: 5rem;
+    border: .15rem solid white;
+    // max-height: 20rem;
+    // max-width: 20rem;
+    display: flex;
+    // overflow: scroll;
+    margin-top: 2rem;
+}
+.language-list{
+    // list-style-type: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: 0.25rem;
+    max-width: 8rem;
+    max-height: 10rem;
+    padding: 0;
+    list-style-type: none;
+    &-item {
+    text-align: center;
+    // max-height: 10rem;
+    // max-width: 10rem;
+    // padding-left: 1rem;
+    // margin-bottom: 1rem;
+    border-bottom: .15rem solid white ;
+    cursor: pointer;
+    overflow-y: scroll;
+    }
+}
+.language-list ::-webkit-scrollbar {
+        display: none;
+    }
+.language-item::-webkit-scrollbar {
+        display: none;
+    }
+.language-item {
+    text-align: center;
+    max-height: 4rem;
+    max-width: 6rem;
+    padding: 0.5rem;
+    // padding-left: 1rem;
+    // margin-bottom: 1rem;
+    border-bottom: 2px solid white ;
+    cursor: pointer;
+    // overflow-y: scroll;
+    font-size: .5rem;
+}
+
+.languages-prompt {
+    font-size: .5rem;    
+    padding-left: 1rem;
+    
 }
