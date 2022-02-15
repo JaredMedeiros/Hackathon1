@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles/interface.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap" rel="stylesheet">
     <title>Document</title>
+    
 </head>
 <body>
-    <h2>Talkback</h2>
-        <p>Click the button to speak</p>
-        <p><button type="button" onclick="runSpeechRecognition()">Speak</button> &nbsp; <span id="action"></span></p>
+    <main class="main">
+        <div>
+        <h2 class="main__title">Talkback</h2>
+        </div>
+        <div class="main__container">
+            <p class="main__subtitle">Click the button to speak</p>
+            <p><button type="button" onclick="runSpeechRecognition()">Speak</button> &nbsp; <span id="action"></span></p>
+        </div>
         <div id="output" class="hide"></div>
-
         <div class="translation"></div>
+    </main>    
 
 <script src="../scripts/interface.js"></script>
 </body>

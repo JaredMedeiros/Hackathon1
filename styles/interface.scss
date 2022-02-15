@@ -1,20 +1,78 @@
+@import '../styles/partials/_fonts'; as *
+
+html,
 body {
-    font-family: arial;
+    font-family: 'Source Code Pro';
+    background-color: black;
+    
 }
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Source Code Pro';
+    font-weight: 400;
+    color: white;
+
+    &__title {
+        font-weight:400;
+        margin-top: 0;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .1rem solid rgba(255, 255, 255, 0.63); /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+            typing 1.8s steps(25, end), blink-caret .75s step-end infinite;
+
+
+        /* The typing effect */
+        @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+        }
+
+        /* The typewriter cursor effect */
+        @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: rgba(255, 255, 255, 0.63); }
+        }
+
+    }
+    
+    &__subtitle {
+        font-weight: 300;
+    }
+
+    &__container {
+        margin-top: 10rem;
+    }
+}
+
+
 button {
     padding:10px;
-    background-color:#6a67ce;
-    color: #FFFFFF;
+    background-color: white;
+    color: black;
     border: 0px;
     cursor:pointer;
     border-radius: 5px;
+    font-family: 'Source Code Pro';
+    font-weight: 300;
 }
 #output {
-    background-color:#F9F9F9;
+    color:white;
     padding:10px;
     width: 100%;
     margin-top:20px;
     line-height:30px;
+    font-size: 1rem;
+    font-weight: 300;
+
 }
 .hide {
     display:none;
