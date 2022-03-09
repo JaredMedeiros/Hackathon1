@@ -1,5 +1,3 @@
-// const { type } = require("express/lib/response");
-
 function generateText(x) {
     let resultsContainer = document.querySelector('.result-box');
     let pTag = document.createElement('p');
@@ -18,7 +16,7 @@ function translateWord (str, lang) {
     headers: {
     'content-type': 'application/json',
     'x-rapidapi-host': 'deep-translate1.p.rapidapi.com',
-    'x-rapidapi-key': 'cd85d7f71bmsh508b6b64dff8da8p1b943cjsnc3090c186953'
+    'x-rapidapi-key': /* insert your api key */
     },
         data: {q: `${str}`, target: `${lang}`}
     };
@@ -35,7 +33,6 @@ function translateWord (str, lang) {
 let transcript;
 
 function runSpeechRecognition() {
-    // let final_transcript = "";
 	// store our output div as a variable
 	let output = document.getElementById("output");
 	// store our action as a variable
@@ -61,15 +58,13 @@ function runSpeechRecognition() {
         transcript = event.results[0][0].transcript;       
         console.log(transcript)
         output.innerText = transcript;
-        // final_transcript = event.results[0][0];
-        // text.push(transcript)
         output.classList.remove("hide");
         let languagecontainer = document.getElementById("languages-container")
         languagecontainer.classList.remove("hide");
         
 
     };
-    // translateWord('hello', 'es');
+    
 
  
     recognition.start();
@@ -80,7 +75,7 @@ let listItem = document.querySelectorAll('.language-item');
 
 
 
-// // // //function to get last two in array: lan code, last two used to search
+//function to get last two in array: lan code, last two used to search
 listItem.forEach(function(element) {
     element.addEventListener('click', function () {
         let strArr = element.innerText.split(':');
@@ -90,57 +85,13 @@ listItem.forEach(function(element) {
     })
 })
 
-
-
-
-// let languageSection = document.querySelector('.display-languages');
-
-//where list of languages are being added
-// let languageList = document.querySelector('.language');
-
-// // console.log(languageList)
-
-//translates the word.
-
-
-
-
-
-
-
-
-
-// function translateWord (str, lang) {
-
-//     const options = {
-//     method: 'POST',
-//     url: 'https://deep-translate1.p.rapidapi.com/language/translate/v2',
-//     headers: {
-//     'content-type': 'application/json',
-//     'x-rapidapi-host': 'deep-translate1.p.rapidapi.com',
-//     'x-rapidapi-key': 'cd85d7f71bmsh508b6b64dff8da8p1b943cjsnc3090c186953'
-//     },
-//         data: {q: `${str}`, target: `${lang}`}
-//     };
-
-//     axios.request(options).then(function (response) {
-// 	    console.log(response.data.data.translations.translatedText);
-//     }).catch(function (error) {
-// 	    console.error(error);
-//     });
-// }
-
-
-        // translateWord('hello', 'es');
-
-
 // retrieve options and display them.
 const options = {
     method: 'GET',
     url: 'https://deep-translate1.p.rapidapi.com/language/translate/v2/languages',
     headers: {
     'x-rapidapi-host': 'deep-translate1.p.rapidapi.com',
-    'x-rapidapi-key': 'cd85d7f71bmsh508b6b64dff8da8p1b943cjsnc3090c186953'
+    'x-rapidapi-key': /* replace with your api key */
     }
 };
 
@@ -163,87 +114,3 @@ axios.request(options).then(function (response) {
 }).catch(function (error) {
 	console.error(error);
 });
-
-
-// let resultsContainer = document.querySelector('.result-box');
-// console.log(resultsContainer) 
-
-
-// // functions to display text on screen, will use function above to translate;
-// // axios function;
-// function generateText(x,y) {
-//     let resultsContainer = document.querySelector('.result-box');
-//     let pTag = document.createElement('p');
-//     pTag.innerText = x + " ; " + y
-
-//     resultsContainer.appendChild(pTag)
-// }
-
-
-// // //selects all list items and retrives value;
-// let listItem = document.querySelectorAll('.language-item');
-
-
-
-// // // // //function to get last two in array: lan code, last two used to search
-// listItem.forEach(function(element) {
-//     element.addEventListener('click', function () {
-//         let strArr = element.innerText.split(':');
-//         let code = strArr[strArr.length - 1];
-//         // generateText('hello', code)
-//         console.log(code)
-//         console.log(transcript)
-//     })
-// })​​​
-
-
-
-
-// function getLanguages () {
-//     const options = {
-//       method: 'GET',
-//       url: 'https://deep-translate1.p.rapidapi.com/language/translate/v2/languages',
-//       headers: {
-//         'x-rapidapi-host': 'deep-translate1.p.rapidapi.com',
-//         'x-rapidapi-key': 'cd85d7f71bmsh508b6b64dff8da8p1b943cjsnc3090c186953'
-//       }
-//     };
-
-//     axios.request(options).then(function (response) {
-//     	let langArr = response.data.languages;
-        
-//         langArr.forEach(element => {
-//             console.log(element)
-//         });
-
-        
-//     }).catch(function (error) {
-//     	console.error(error);
-//     });
-// };
-
-
-// // getLanguages()
-
-
-// function translateWord (str, lang) {
-
-//     const options = {
-//     method: 'POST',
-//     url: 'https://deep-translate1.p.rapidapi.com/language/translate/v2',
-//     headers: {
-//     'content-type': 'application/json',
-//     'x-rapidapi-host': 'deep-translate1.p.rapidapi.com',
-//     'x-rapidapi-key': 'cd85d7f71bmsh508b6b64dff8da8p1b943cjsnc3090c186953'
-//   },
-//     data: {q: `${str}`, target: `${lang}`}
-// };
-
-// axios.request(options).then(function (response) {
-// 	console.log(response.data.data.translations.translatedText);
-// }).catch(function (error) {
-// 	console.error(error);
-// });
-// }
-
-// translateWord('hello', 'es')

@@ -21,22 +21,22 @@ body {
     &__title {
         font-weight:400;
         margin-top: 0;
-        overflow: hidden; /* Ensures the content is not revealed until the animation */
-        border-right: .1rem solid rgba(255, 255, 255, 0.63); /* The typwriter cursor */
+        overflow: hidden; 
+        border-right: .1rem solid rgba(255, 255, 255, 0.63); 
         white-space: nowrap; /* Keeps the content on a single line */
-        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-        letter-spacing: .15em; /* Adjust as needed */
+        margin: 0 auto;
+        letter-spacing: .15em;
         animation: 
             typing 1.8s steps(25, end), blink-caret .75s step-end infinite;
 
 
-        /* The typing effect */
+       
         @keyframes typing {
         from { width: 0 }
         to { width: 100% }
         }
 
-        /* The typewriter cursor effect */
+        
         @keyframes blink-caret {
         from, to { border-color: transparent }
         50% { border-color: rgba(255, 255, 255, 0.63); }
@@ -82,16 +82,11 @@ button {
 }
 
 #languages-container {
-    // margin-top: 5rem;
     border: .15rem solid white;
-    // max-height: 20rem;
-    // max-width: 20rem;
     display: flex;
-    // overflow: scroll;
     margin-top: 2rem;
 }
 .language-list{
-    // list-style-type: none;
     overflow: hidden;
     width: 100%;
     height: 100%;
@@ -103,10 +98,6 @@ button {
     list-style-type: none;
     &-item {
     text-align: center;
-    // max-height: 10rem;
-    // max-width: 10rem;
-    // padding-left: 1rem;
-    // margin-bottom: 1rem;
     border-bottom: .15rem solid white ;
     cursor: pointer;
     overflow-y: scroll;
@@ -123,11 +114,8 @@ button {
     max-height: 4rem;
     max-width: 6rem;
     padding: 0.5rem;
-    // padding-left: 1rem;
-    // margin-bottom: 1rem;
     border-bottom: 2px solid white ;
     cursor: pointer;
-    // overflow-y: scroll;
     font-size: .5rem;
 }
 
